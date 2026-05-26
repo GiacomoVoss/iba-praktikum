@@ -86,7 +86,7 @@ export class Film {
   @Column('int')
   erscheinungsjahr!: number;
 
-  @Column({ nullable: true })
+  @Column({ type: 'text', nullable: true })
   beschreibung!: string | null;
 
   @Column('decimal', { precision: 3, scale: 1 })
