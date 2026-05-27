@@ -13,25 +13,15 @@
  * │  1. Erstelle die Datei:  src/entities/MeineEntitaet.ts                  │
  * │     (Orientiere dich an src/entities/Produkt.ts als Vorlage)            │
  * │                                                                         │
- * │  2. Importiere sie hier (Schritt A)                                     │
- * │                                                                         │
- * │  3. Füge sie zur entities-Liste hinzu (Schritt B)                       │
- * │                                                                         │
  * │  ➜ Beim nächsten Start wird die Tabelle automatisch erzeugt!            │
  * └─────────────────────────────────────────────────────────────────────────┘
  * =============================================================================
  */
 
 import 'reflect-metadata';
+import * as path from 'path';
 import { DataSource } from 'typeorm';
-
-// Eingebaute Entitäten (nicht verändern)
 import { User } from './_intern/entities/User';
-
-// ── Schritt A: Importiere hier deine eigenen Entitäten ────────────────────────
-import { Produkt } from './entities/Produkt';
-// import { MeineEntitaet } from './entities/MeineEntitaet';
-// ──────────────────────────────────────────────────────────────────────────────
 
 export const AppDataSource = new DataSource({
   type: 'better-sqlite3',
@@ -50,9 +40,8 @@ export const AppDataSource = new DataSource({
     // Eingebaute Entitäten (nicht verändern)
     User,
 
-    // ── Schritt B: Füge deine eigenen Entitäten hier hinzu ──────────────────
-    Produkt,
-    // MeineEntitaet,
-    // ──────────────────────────────────────────────────────────────────────────
+    // Alle Dateien aus src/entities/ werden automatisch eingelesen –
+    // einfach eine neue .ts-Datei dort ablegen, fertig.
+    path.join(__dirname, 'entities', '*.{ts,js}'),
   ],
 });
