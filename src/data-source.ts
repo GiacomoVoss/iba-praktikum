@@ -26,7 +26,7 @@ import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
 // Eingebaute Entitäten (nicht verändern)
-import { User } from './entities/User';
+import { User } from './_intern/entities/User';
 
 // ── Schritt A: Importiere hier deine eigenen Entitäten ────────────────────────
 import { Produkt } from './entities/Produkt';

@@ -13,8 +13,8 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 import express from 'express';
-import { AppDataSource } from './data-source';
-import { registerRoutes } from './routes';
+import { AppDataSource } from '../data-source';
+import { registerRoutes } from '../routes';
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;

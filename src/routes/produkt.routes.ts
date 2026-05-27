@@ -23,7 +23,7 @@
 import { Router, Request, Response } from 'express';
 import { AppDataSource } from '../data-source';
 import { Produkt } from '../entities/Produkt';
-import { requireAuth } from '../middleware/auth.middleware';
+import { requireAuth } from '../_intern/middleware/auth.middleware';
 
 export const produktRouter = Router();
 

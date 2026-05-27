@@ -19,7 +19,7 @@
  */
 
 import { Express, Request, Response } from 'express';
-import { authRouter } from './auth.routes';
+import { authRouter } from '../_intern/routes/auth.routes';
 
 // ── Schritt A: Importiere hier deine eigenen Router ───────────────────────────
 import { produktRouter } from './produkt.routes';

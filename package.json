@@ -2,9 +2,9 @@
   "name": "iba-praktikum",
   "version": "1.0.0",
   "description": "Backend-Framework für das IBA-Praktikum (IT-Center Dortmund)",
-  "main": "dist/index.js",
+  "main": "dist/_intern/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/_intern/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
